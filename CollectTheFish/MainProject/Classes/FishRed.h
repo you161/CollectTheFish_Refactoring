@@ -1,0 +1,23 @@
+//
+//FishRed.h
+//
+
+#pragma once
+
+#include "../HuEngine.h"
+#include"SpriteObject.h"
+#include"FishMovement.h"
+
+class FishRed : public SpriteObject{
+public:
+    void Load();
+    void Initialize(HE::Math::Vector2 initial);
+    void Update();
+    void OnCollision();  
+    HE::Math::Rectangle GetCollision();  
+    void SetInitialPosition();
+
+private:
+    FishMovement fishMovement;
+    HE::Sprite collision_sprite_; 
+};
