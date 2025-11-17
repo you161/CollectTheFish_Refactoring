@@ -39,3 +39,11 @@
 
 # debug information files
 *.dwo
+
+*.log
+*.tlog
+*.txt
+*.recipe
+CollectTheFish/.vs
+CollectTheFish/MainProject/obj
+CollectTheFish/Assets/Shaders
