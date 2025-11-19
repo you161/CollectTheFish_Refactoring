@@ -1,13 +1,13 @@
 
 //
-// PlayerData.cpp
+// Score.cpp
 //
 
-#include "PlayerData.h"
+#include "Score.h"
 
 using namespace HE;
 
-void PlayerData::Load()
+void Score::Load()
 {
     score_headline_.params.style = Font::AddFontStyle("Fonts/msgothic002.ttf");
     score_text_.params.style = Font::AddFontStyle("Fonts/msgothic002.ttf");
@@ -16,7 +16,7 @@ void PlayerData::Load()
     RenderingPath->AddFont(&score_text_, 1000);
 }
 
-void PlayerData::Initialize()
+void Score::Initialize()
 {
     score_ = 0;
 
@@ -35,7 +35,7 @@ void PlayerData::Initialize()
     score_text_.params.color = Color(0, 0, 255);
 }
 
-void PlayerData::SetScore(int score)
+void Score::SetScore(int score)
 {
     score_ = score;
     score_text_.SetText(std::to_string(score_));
