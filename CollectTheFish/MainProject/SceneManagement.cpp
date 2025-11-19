@@ -21,7 +21,7 @@ void SceneManagement::Initialize()
 		SetCurrentDirectory(L"../Assets");
 
 	HE::Application::Initialize();
-	scene_loader_.Load(NextScene::StartScene);
+	scene_loader_.Load(NextScene::MainScene);
 }
 
 std::unique_ptr<HE::Scene> SceneManagement::CreateScene(const NextScene nextScene)

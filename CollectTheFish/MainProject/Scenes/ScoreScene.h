@@ -6,7 +6,6 @@
 #include "../HuEngine.h"
 #include "../Classes/Player.h"
 #include "../Scenes/MainScene.h"
-#include "../Classes/PlayerData.h"
 
 using namespace std;
 
@@ -29,6 +28,4 @@ private:
     HE::Sound bgm_;
     HE::Sound se_;
     Player player_;
-    PlayerData playerdata_;
-
 };

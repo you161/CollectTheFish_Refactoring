@@ -26,6 +26,12 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{ebca5a98-a8c8-4919-9b20-4071797f86b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Player">
+      <UniqueIdentifier>{2ba2a327-581e-4361-9b69-d4101e6d229d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Fish">
+      <UniqueIdentifier>{b2595c99-b115-49b6-be4a-823768f4ebdb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -88,32 +94,11 @@
     <ClInclude Include="Scenes\StartScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Player.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\PlayerData.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishOrange.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishBrown.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Fishblue.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Fishgreen.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Fishpink.h">
+    <ClInclude Include="Classes\Score.h">
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="Scenes\ScoreScene.h">
       <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishBrownA.h">
-      <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="Classes\PlayerLife.h">
       <Filter>Classes</Filter>
@@ -124,10 +109,46 @@
     <ClInclude Include="Classes\SpriteObject.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\FishRed.h">
-      <Filter>Classes</Filter>
+    <ClInclude Include="Classes\Fishblue.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\FishBrown.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\FishBrownA.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Fishgreen.h">
+      <Filter>Classes\Fish</Filter>
     </ClInclude>
     <ClInclude Include="Classes\FishMovement.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\FishOrange.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Fishpink.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\FishRed.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Player.h">
+      <Filter>Classes\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PlayerInput.h">
+      <Filter>Classes\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PlayerMovement.h">
+      <Filter>Classes\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\PlayerData.h">
+      <Filter>Classes\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CollisionDetection.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ICollider.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
@@ -168,32 +189,11 @@
     <ClCompile Include="Scenes\StartScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Player.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\PlayerData.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishOrange.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishBrown.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Fishblue.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Fishgreen.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Fishpink.cpp">
+    <ClCompile Include="Classes\Score.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Scenes\ScoreScene.cpp">
       <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishBrownA.cpp">
-      <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\PlayerLife.cpp">
       <Filter>Classes</Filter>
@@ -204,10 +204,40 @@
     <ClCompile Include="Classes\SpriteObject.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\FishRed.cpp">
-      <Filter>Classes</Filter>
+    <ClCompile Include="Classes\Fishblue.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FishBrown.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FishBrownA.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Fishgreen.cpp">
+      <Filter>Classes\Fish</Filter>
     </ClCompile>
     <ClCompile Include="Classes\FishMovement.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FishOrange.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Fishpink.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FishRed.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Player.cpp">
+      <Filter>Classes\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\PlayerInput.cpp">
+      <Filter>Classes\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\PlayerMovement.cpp">
+      <Filter>Classes\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CollisionDetection.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>

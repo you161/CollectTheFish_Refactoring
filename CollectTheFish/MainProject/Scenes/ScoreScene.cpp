@@ -36,7 +36,7 @@ void ScoreScene::Load()
    
     
     player_.Load();
-    DontDestroy.playerdata_.Load();
+    DontDestroy.m_score.Load();
  
     Scene::Load();
 }

@@ -35,7 +35,7 @@ private:
 
 public:
 
-	PlayerData playerdata_;
+	Score m_score;
 
 };
 }

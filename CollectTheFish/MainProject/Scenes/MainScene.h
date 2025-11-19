@@ -13,7 +13,7 @@
 #include "../Classes/Fishgreen.h"
 #include "../Classes/Fishpink.h"
 #include "../Classes/FishOrange.h"
-#include "../Classes/PlayerData.h"
+#include "../Classes/Score.h"
 #include "../Classes/PlayerLife.h"
 #include"../Scenes/ScoreScene.h"
 #include"../Scenes/StartScene.h"
@@ -59,7 +59,7 @@ private:
     FishBrown fB_;
     FishBrownA fBA_;
 
-    PlayerData playerdata_;
+    Score m_score;
     PlayerLife playerlife_;
 
 };

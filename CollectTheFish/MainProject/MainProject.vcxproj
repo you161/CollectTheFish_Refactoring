@@ -106,6 +106,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Classes\BG.h" />
+    <ClInclude Include="Classes\CollisionDetection.h" />
     <ClInclude Include="Classes\Fishblue.h" />
     <ClInclude Include="Classes\FishBrown.h" />
     <ClInclude Include="Classes\FishBrownA.h" />
@@ -114,9 +115,13 @@
     <ClInclude Include="Classes\FishOrange.h" />
     <ClInclude Include="Classes\Fishpink.h" />
     <ClInclude Include="Classes\FishRed.h" />
+    <ClInclude Include="Classes\ICollider.h" />
     <ClInclude Include="Classes\Player.h" />
     <ClInclude Include="Classes\PlayerData.h" />
+    <ClInclude Include="Classes\Score.h" />
+    <ClInclude Include="Classes\PlayerInput.h" />
     <ClInclude Include="Classes\PlayerLife.h" />
+    <ClInclude Include="Classes\PlayerMovement.h" />
     <ClInclude Include="Classes\SpriteObject.h" />
     <ClInclude Include="HEToolKit\cppcoro\cppcoro.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Bezier.h" />
@@ -142,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\BG.cpp" />
+    <ClCompile Include="Classes\CollisionDetection.cpp" />
     <ClCompile Include="Classes\Fishblue.cpp" />
     <ClCompile Include="Classes\FishBrown.cpp" />
     <ClCompile Include="Classes\FishBrownA.cpp" />
@@ -151,8 +157,10 @@
     <ClCompile Include="Classes\Fishpink.cpp" />
     <ClCompile Include="Classes\FishRed.cpp" />
     <ClCompile Include="Classes\Player.cpp" />
-    <ClCompile Include="Classes\PlayerData.cpp" />
+    <ClCompile Include="Classes\Score.cpp" />
+    <ClCompile Include="Classes\PlayerInput.cpp" />
     <ClCompile Include="Classes\PlayerLife.cpp" />
+    <ClCompile Include="Classes\PlayerMovement.cpp" />
     <ClCompile Include="Classes\SpriteObject.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Keyboard.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Mouse.cpp" />
