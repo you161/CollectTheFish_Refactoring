@@ -6,6 +6,7 @@
 
 #include "../HuEngine.h"
 #include"SpriteObject.h"
+#include"FishMovement.h"
 
 class FishOrange : public SpriteObject{
 public:
@@ -17,5 +18,5 @@ public:
     void SetInitialPosition();
 
 private:
-    HE::Sprite collision_sprite_;
+    FishMovement m_fishMovement;
 };

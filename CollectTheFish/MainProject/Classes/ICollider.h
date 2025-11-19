@@ -1,10 +1,13 @@
 #pragma once
 
-#include "../HEToolKit/DirectXTK/SimpleMath.h"
+#include "../HuEngine.h"
 
-class ICollider {
+using CollisionRect = HE::Math::Rectangle;
+
+class ICollider{
 public:
 	virtual ~ICollider() = default;
-	virtual DirectX::SimpleMath::Rectangle GetCollider() = 0;
+
+	virtual CollisionRect GetCollision() = 0;
 	virtual void OnCollision() = 0;
 };

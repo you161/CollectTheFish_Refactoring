@@ -15,39 +15,21 @@ void Player::Load()
 
 void Player::Initialize()
 {
-	SpriteObject::Initialize(Vector2(84.0f, 63.0f),Vector2(0.0f,0.0f));
+	SpriteObject::Initialize(m_playerData.RenderSize,Vector2(0.0f,0.0f));
     SetInitialPosition();
-
-    // 衝突範囲の表示設定
-    collision_sprite_.params.color = HE::Color(255, 0, 0);
-    collision_sprite_.params.opacity = 0.0f;              // 透明度
 }
 
 void Player::Update()
 {
-    //上下左右　
-    Math::Vector2 direction;
+    m_sprite.params.pos = m_playerMovement.Movement(m_sprite.params.pos,m_playerInput.Input(),
+        m_playerData.RenderSize, m_playerData.MovementSpeedX,m_playerData.MovementSpeedY);
 
-    if (InputSystem.Keyboard.isPressed.Right)
-        direction += Math::Vector2(1, 0);
-    if (InputSystem.Keyboard.isPressed.Left)
-        direction += Math::Vector2(-1, 0);
-   
-    m_sprite.params.pos.y += 80.0f * Time.deltaTime;
-    
-
-    //矢印の長さを1にする
-    direction.Normalize();
-
-    auto prev_pos = m_sprite.params.pos;
-    m_sprite.params.pos += direction * 100.0f * Time.deltaTime;
-
-    //画面の外に出ないようにする
-    m_sprite.params.pos.x = std::clamp(m_sprite.params.pos.x, 0.0f, 1280.0f - 84.0f);
-    m_sprite.params.pos.y = std::clamp(m_sprite.params.pos.y, 0.0f, 720.0f - 63.0f);
-
-    if (m_sprite.params.pos.y >= 720.0f - 63.0f) {
-        m_sprite.params.pos.y = -64.0f;
+    Vector2 move = m_playerInput.Input();
+    if (move.x > 0) {
+        m_sprite.params.enableMirror();
+    }
+    else {
+        m_sprite.params.disableMirror();
     }
 }
 
@@ -59,13 +41,7 @@ Math::Rectangle Player::GetCollision()
     collision.width = (long)(m_sprite.params.siz.x);
     collision.height = (long)(m_sprite.params.siz.y);
 
-
-    // 衝突範囲表示設定
-    collision_sprite_.params.pos.x = (float)collision.x;
-    collision_sprite_.params.pos.y = (float)collision.y;
-    collision_sprite_.params.siz.x = (float)collision.width;
-    collision_sprite_.params.siz.y = (float)collision.height;
-
+    SpriteObject::SetCollisionSprite(Vector2(collision.width, collision.height), Vector2(collision.x, collision.y));
 
     return collision;
 }

@@ -18,6 +18,5 @@ public:
     void SetInitialPosition();
 
 private:
-    FishMovement fishMovement;
-    HE::Sprite collision_sprite_; 
+    FishMovement m_fishMovement;
 };

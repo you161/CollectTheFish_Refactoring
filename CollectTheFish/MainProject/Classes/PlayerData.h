@@ -1,19 +1,14 @@
-
-//PlaterData.h
+//
+//player.h
+//
 
 #pragma once
 
 #include "../HuEngine.h"
 
-class PlayerData {
+class PlayerData{
 public:
-    void Load();
-    void Initialize();
-    int  GetScore() const { return score_; }
-    void SetScore(int score);
-
-private:
-    int score_;
-    HE::SpriteFont score_headline_;
-    HE::SpriteFont score_text_;
+    const float MovementSpeedX = 80.0f;
+    const float MovementSpeedY = 80.0f;
+    const Vector2 RenderSize{ 84.0f, 63.0f };
 };

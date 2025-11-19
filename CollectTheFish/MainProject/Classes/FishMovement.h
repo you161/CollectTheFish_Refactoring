@@ -12,6 +12,6 @@ using std::string;
 
 class FishMovement {
 public:
-	void Movement(Vector3 position, Vector2 size,float speed,int move);
+	Vector3 Movement(Vector3 position, Vector2 size,float speed,int move,Vector2 setPosition);
 protected:
 };

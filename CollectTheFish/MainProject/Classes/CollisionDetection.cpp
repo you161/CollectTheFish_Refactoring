@@ -16,9 +16,9 @@ void CollisionDetection::Detect(const std::wstring groupA, const std::wstring gr
 	auto&& group_a = collider_group_[groupA];
 	auto&& group_b = collider_group_[groupB];
 	for (const auto& collider_a : group_a) {
-		const auto& collision_a = collider_a->GetCollider();
+		const auto& collision_a = collider_a->GetCollision();
 		for (const auto& collider_b : group_b) {
-			if (collision_a.Intersects(collider_b->GetCollider())) {
+			if (collision_a.Intersects(collider_b->GetCollision())) {
 				collider_a->OnCollision();
 				collider_b->OnCollision();
 				if (isBreak)
