@@ -43,7 +43,6 @@ void MainScene::Load()
     bgm_.PlayFromTop();
 
     se_ = Sound("Sound/PushA.wav", Sound::LoopCount::SE);
-    se_.PlayFromTop();
 
     Scene::Load();
 }
@@ -126,7 +125,6 @@ void MainScene::Update(float deltaTime)
      score += 10;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Collect.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
 
@@ -138,7 +136,6 @@ void MainScene::Update(float deltaTime)
      score += 30;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Collect.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  } 
  
@@ -149,7 +146,6 @@ void MainScene::Update(float deltaTime)
      score += 20;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Collect.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
 
@@ -160,7 +156,6 @@ void MainScene::Update(float deltaTime)
      score += 50;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Collect.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
 
@@ -172,7 +167,6 @@ void MainScene::Update(float deltaTime)
      score += 5;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Collect.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
 
@@ -183,7 +177,6 @@ void MainScene::Update(float deltaTime)
      score -= 50;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Da.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
 
@@ -194,7 +187,6 @@ void MainScene::Update(float deltaTime)
      score -= 50;
      m_score.SetScore(score);
 
-     se_ = Sound("Sound/Da.wav", Sound::LoopCount::SE);
      se_.PlayFromTop();
  }
      Scene::Update(deltaTime);
