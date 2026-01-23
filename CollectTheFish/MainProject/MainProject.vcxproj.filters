@@ -151,6 +151,9 @@
     <ClInclude Include="Classes\ICollider.h">
       <Filter>Classes</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\FishManager.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -239,6 +242,9 @@
     </ClCompile>
     <ClCompile Include="Classes\CollisionDetection.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FishManager.cpp">
+      <Filter>Classes\Fish</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
