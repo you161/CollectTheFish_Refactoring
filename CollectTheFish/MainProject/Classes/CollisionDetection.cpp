@@ -4,11 +4,9 @@
 
 #include "CollisionDetection.h"
 
-using namespace HE;
-
-void CollisionDetection::AddCollider(const std::wstring group, ICollider* iCollider)
+void CollisionDetection::AddGroupList(const std::wstring group, ICollider* iCollider)
 {
-	collider_group_[group].push_back(iCollider);
+	collider_group_[group].emplace(iCollider);
 }
 
 void CollisionDetection::Detect(const std::wstring groupA, const std::wstring groupB, const bool isBreak)
@@ -21,11 +19,17 @@ void CollisionDetection::Detect(const std::wstring groupA, const std::wstring gr
 			if (collision_a.Intersects(collider_b->GetCollision())) {
 				collider_a->OnCollision();
 				collider_b->OnCollision();
+
 				if (isBreak)
 					return;
 			}
 		}
 	}
+}
+
+void CollisionDetection::ClearGroup(const std::wstring group)
+{
+	collider_group_[group].clear();
 }
 
 void CollisionDetection::Clear()
