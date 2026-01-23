@@ -17,7 +17,11 @@
 #include "../Classes/PlayerLife.h"
 #include"../Scenes/ScoreScene.h"
 #include"../Scenes/StartScene.h"
+#include"../Classes/CollisionDetection.h"
+#include"../Classes/FishManager.h"
 
+using namespace HE;
+using namespace Math;
 
 
 class MainScene : public HE::Scene
@@ -31,21 +35,20 @@ public:
     void Terminate() override;
     void Update(float deltaTime) override;
 
-    
+    void AddScore(int point);
  
 private:
+    Sound bgm_;
+    Sound se_;
+    Sound time_se_;
 
-    HE::Sprite sprite_R;
-    HE::Sprite sprite_W;
-    BG     bg_;
-    HE::Sound bgm_;
-    HE::Sound se_;
-    int score_;
-    NextScene nextScene_;
-  
-    HE::SpriteFont score_headline_;
-    HE::SpriteFont score_text_;
+    Sprite sprite_R;
+    Sprite sprite_W;
+    SpriteFont score_headline_;
+    SpriteFont score_text_;
     
+    NextScene nextScene_;
+    BG     bg_;
     Player player_;
 
     FishRed a_;
@@ -54,14 +57,20 @@ private:
     Fishblue fb_;
     Fishgreen fg_;
     Fishpink fp_;
-    Fishpink fpA_;
-    Fishpink fpB_;
+
     FishBrown fB_;
     FishBrownA fBA_;
 
-    Score m_score;
+    Score score_;
     PlayerLife playerlife_;
+    CollisionDetection collision_detect_;
 
+    FishManager fishmanager_[5];
+    int red = 0;
+    int orange = 1;
+    int blue = 2;
+    int green = 3;
+    int pink = 4;
 };
 
 
