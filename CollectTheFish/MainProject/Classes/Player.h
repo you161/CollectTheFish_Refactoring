@@ -13,6 +13,7 @@
 
 class Player : public SpriteObject, public ICollider {
 public:
+    std::function<void()> CollisionProc;
     void Load();
     void Initialize();
     void Update();
@@ -21,7 +22,7 @@ public:
     void OnCollision();
 
     HE::Math::Vector3 GetPosition() const { return m_sprite.params.pos; }
-    void SetInitialPosition();  
+    void SetPosition();
 
 private:
     Sprite collision_sprite_;

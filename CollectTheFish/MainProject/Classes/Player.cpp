@@ -16,7 +16,7 @@ void Player::Load()
 void Player::Initialize()
 {
 	SpriteObject::Initialize(m_playerData.RenderSize,Vector2(0.0f,0.0f));
-    SetInitialPosition();
+    SetPosition();
 }
 
 void Player::Update()
@@ -30,6 +30,10 @@ void Player::Update()
     }
     else {
         m_sprite.params.disableMirror();
+    }
+
+    if (m_sprite.params.pos.y >= 720.0f - m_sprite.params.siz.y) {
+        OnCollision();
     }
 }
 
@@ -49,10 +53,10 @@ Math::Rectangle Player::GetCollision()
 
 void Player::OnCollision()
 {
-    SetInitialPosition();
+    CollisionProc();
 }
 
-void Player::SetInitialPosition()
+void Player::SetPosition()
 {
     m_sprite.params.pos = Math::Vector2(
         (RenderingPath->GetLogicalWidth() - m_sprite.params.siz.x) / 2.0f,
