@@ -109,28 +109,7 @@
     <ClInclude Include="Classes\SpriteObject.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Fishblue.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishBrown.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishBrownA.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Fishgreen.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\FishMovement.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishOrange.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Fishpink.h">
-      <Filter>Classes\Fish</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\FishRed.h">
       <Filter>Classes\Fish</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Player.h">
@@ -213,28 +192,7 @@
     <ClCompile Include="Classes\SpriteObject.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Fishblue.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishBrown.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishBrownA.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Fishgreen.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\FishMovement.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishOrange.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Fishpink.cpp">
-      <Filter>Classes\Fish</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FishRed.cpp">
       <Filter>Classes\Fish</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Player.cpp">

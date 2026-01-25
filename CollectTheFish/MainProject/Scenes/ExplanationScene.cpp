@@ -48,9 +48,9 @@ void ExplanationScene::Load()
     RenderingPath->AddSprite(&sprite_green_, -50);
     sprite_green_.params.siz = Math::Vector2(64.0f, 64.0f);
 
-    sprite_blue_ = Sprite("fish_blueA.png");
+    sprite_blue_ = Sprite("fish_blue.png");
     RenderingPath->AddSprite(&sprite_blue_, -50);
-    sprite_blue_.params.siz = Math::Vector2(64.0f, 64.0f);
+    sprite_blue_.params.siz = Math::Vector2(128.0f, 128.0f);
 
     sprite_orange_ = Sprite("fish_orange.png");
     RenderingPath->AddSprite(&sprite_orange_, -50);
