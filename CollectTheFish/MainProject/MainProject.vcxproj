@@ -107,6 +107,7 @@
   <ItemGroup>
     <ClInclude Include="Classes\BG.h" />
     <ClInclude Include="Classes\CollisionDetection.h" />
+    <ClInclude Include="Classes\Fish.h" />
     <ClInclude Include="Classes\Fishblue.h" />
     <ClInclude Include="Classes\FishBrown.h" />
     <ClInclude Include="Classes\FishBrownA.h" />
@@ -114,6 +115,7 @@
     <ClInclude Include="Classes\FishManager.h" />
     <ClInclude Include="Classes\FishMovement.h" />
     <ClInclude Include="Classes\FishOrange.h" />
+    <ClInclude Include="Classes\FishParam.h" />
     <ClInclude Include="Classes\Fishpink.h" />
     <ClInclude Include="Classes\FishRed.h" />
     <ClInclude Include="Classes\ICollider.h" />
@@ -149,6 +151,7 @@
   <ItemGroup>
     <ClCompile Include="Classes\BG.cpp" />
     <ClCompile Include="Classes\CollisionDetection.cpp" />
+    <ClCompile Include="Classes\Fish.cpp" />
     <ClCompile Include="Classes\Fishblue.cpp" />
     <ClCompile Include="Classes\FishBrown.cpp" />
     <ClCompile Include="Classes\FishBrownA.cpp" />

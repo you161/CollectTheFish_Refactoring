@@ -154,6 +154,12 @@
     <ClInclude Include="Classes\FishManager.h">
       <Filter>Classes\Fish</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\FishParam.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Fish.h">
+      <Filter>Classes\Fish</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -244,6 +250,9 @@
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\FishManager.cpp">
+      <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Fish.cpp">
       <Filter>Classes\Fish</Filter>
     </ClCompile>
   </ItemGroup>
