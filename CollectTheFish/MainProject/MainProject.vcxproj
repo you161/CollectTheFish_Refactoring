@@ -116,7 +116,6 @@
     <ClInclude Include="Classes\PlayerData.h" />
     <ClInclude Include="Classes\Score.h" />
     <ClInclude Include="Classes\PlayerInput.h" />
-    <ClInclude Include="Classes\PlayerLife.h" />
     <ClInclude Include="Classes\PlayerMovement.h" />
     <ClInclude Include="Classes\SpriteObject.h" />
     <ClInclude Include="Classes\TimeManager.h" />
@@ -151,7 +150,6 @@
     <ClCompile Include="Classes\Player.cpp" />
     <ClCompile Include="Classes\Score.cpp" />
     <ClCompile Include="Classes\PlayerInput.cpp" />
-    <ClCompile Include="Classes\PlayerLife.cpp" />
     <ClCompile Include="Classes\PlayerMovement.cpp" />
     <ClCompile Include="Classes\SpriteObject.cpp" />
     <ClCompile Include="Classes\TimeManager.cpp" />

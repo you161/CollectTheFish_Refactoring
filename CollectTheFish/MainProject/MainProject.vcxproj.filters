@@ -100,9 +100,6 @@
     <ClInclude Include="Scenes\ScoreScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\PlayerLife.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
     <ClInclude Include="Scenes\ExplanationScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -185,9 +182,6 @@
     </ClCompile>
     <ClCompile Include="Scenes\ScoreScene.cpp">
       <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\PlayerLife.cpp">
-      <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Scenes\ExplanationScene.cpp">
       <Filter>Scenes</Filter>
