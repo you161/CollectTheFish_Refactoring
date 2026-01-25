@@ -7,11 +7,11 @@
 #include "../Classes/BG.h"
 #include "../Classes/Player.h"
 #include "../Classes/Score.h"
-#include "../Classes/PlayerLife.h"
 #include"../Scenes/ScoreScene.h"
 #include"../Scenes/StartScene.h"
 #include"../Classes/CollisionDetection.h"
 #include"../Classes/FishManager.h"
+#include"../Classes/TimeManager.h"
 
 using namespace HE;
 using namespace Math;
@@ -35,17 +35,12 @@ private:
     Sound se_;
     Sound time_se_;
 
-    Sprite sprite_R;
-    Sprite sprite_W;
-    SpriteFont score_headline_;
-    SpriteFont score_text_;
-
     NextScene nextScene_;
     BG     bg_;
     Player player_;
-    FishManager fishmanager_;
+    FishManager fishManager_;
     Score score_;
-    PlayerLife playerlife_;
+    TimeManager timeManager_;
     CollisionDetection collision_detect_;
 };
 
