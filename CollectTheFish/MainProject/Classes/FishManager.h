@@ -1,28 +1,16 @@
-//
-//FishManager.h
-//
-
 #pragma once
 #include "../HuEngine.h"
-#include"SpriteObject.h"
-#include"ICollider.h"
-#include"FishMovement.h"
+#include "Fish.h"
 
-using namespace HE;
-using namespace Math;
-using std::string;
-
-class FishManager : public SpriteObject, public ICollider {
+class FishManager
+{
 public:
-	void Load(string filename, int order);
-	void Initialize(Vector2 renderSize, Vector2 position);
-	void Update(float speed, int move);
-	void SetPosition();
-	CollisionRect GetCollision()override;
-	void OnCollision() override;
+    void Load(const std::vector<FishParam>& params);
+    void Initialize();
+    void Update();
 
-protected:
+    std::vector<Fish>& GetFishList();
+
 private:
-	FishMovement fishMovement_;
-	Vector2 initial_position;
+    std::vector<Fish> fishes_;
 };

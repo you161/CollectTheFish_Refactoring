@@ -1,46 +1,28 @@
-//
-// FishManager.cpp
-//
-
 #include "FishManager.h"
 
-using namespace HE;
-using namespace Math;
-
-void FishManager::Load(string filename, int order)
+void FishManager::Load(const std::vector<FishParam>& params)
 {
-	SpriteObject::Load(filename, order);
+    fishes_.resize(params.size());
+
+    for (size_t i = 0; i < params.size(); i++)
+    {
+        fishes_[i].Load(params[i]);
+    }
 }
 
-void FishManager::Initialize(Vector2 renderSize, Vector2 position)
+void FishManager::Initialize()
 {
-	SpriteObject::Initialize(renderSize, position);
-	initial_position = position;
+    for (auto& fish : fishes_)
+        fish.Initialize();
 }
 
-void FishManager::Update(float speed , int move)
+void FishManager::Update()
 {
-	m_sprite.params.pos = fishMovement_.Movement(m_sprite.params.pos, m_sprite.params.siz, speed, move,
-		Vector2(-200.0f, Random::GetRandom(50.0f, 650.0f)));
+    for (auto& fish : fishes_)
+        fish.Update();
 }
 
-CollisionRect FishManager::GetCollision()
+std::vector<Fish>& FishManager::GetFishList()
 {
-	CollisionRect collision;
-	collision.x = (long)m_sprite.params.pos.x;
-	collision.y = (long)m_sprite.params.pos.y;
-	collision.width = (long)m_sprite.params.siz.x;
-	collision.height = (long)m_sprite.params.siz.y;
-
-	return collision;
-}
-
-void FishManager::OnCollision()
-{
-	SetPosition();
-}
-
-void FishManager::SetPosition()
-{
-	m_sprite.params.pos = initial_position;
+    return fishes_;
 }
