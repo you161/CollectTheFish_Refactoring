@@ -6,13 +6,6 @@
 #include "../HuEngine.h"
 #include "../Classes/BG.h"
 #include "../Classes/Player.h"
-#include "../Classes/FishRed.h"
-#include "../Classes/Fishblue.h"
-#include "../Classes/FishBrown.h"
-#include "../Classes/FishBrownA.h"
-#include "../Classes/Fishgreen.h"
-#include "../Classes/Fishpink.h"
-#include "../Classes/FishOrange.h"
 #include "../Classes/Score.h"
 #include "../Classes/PlayerLife.h"
 #include"../Scenes/ScoreScene.h"
@@ -46,31 +39,14 @@ private:
     Sprite sprite_W;
     SpriteFont score_headline_;
     SpriteFont score_text_;
-    
+
     NextScene nextScene_;
     BG     bg_;
     Player player_;
-
-    FishRed a_;
-    FishRed Aa_;
-    FishOrange fo_;
-    Fishblue fb_;
-    Fishgreen fg_;
-    Fishpink fp_;
-
-    FishBrown fB_;
-    FishBrownA fBA_;
-
+    FishManager fishmanager_;
     Score score_;
     PlayerLife playerlife_;
     CollisionDetection collision_detect_;
-
-    FishManager fishmanager_[5];
-    int red = 0;
-    int orange = 1;
-    int blue = 2;
-    int green = 3;
-    int pink = 4;
 };
 
 
