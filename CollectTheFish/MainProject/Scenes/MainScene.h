@@ -12,6 +12,7 @@
 #include"../Classes/CollisionDetection.h"
 #include"../Classes/FishManager.h"
 #include"../Classes/TimeManager.h"
+#include"../Classes/SEManager.h"
 
 using namespace HE;
 using namespace Math;
@@ -27,22 +28,14 @@ public:
     void Initialize() override;
     void Terminate() override;
     void Update(float deltaTime) override;
-
     void AddScore(int point);
- 
 private:
-    Sound bgm_;
-    Sound se_;
-    Sound time_se_;
-
     NextScene nextScene_;
     BG     bg_;
     Player player_;
     FishManager fishManager_;
     Score score_;
     TimeManager timeManager_;
+    SEmanager seManager_;
     CollisionDetection collision_detect_;
 };
-
-
-

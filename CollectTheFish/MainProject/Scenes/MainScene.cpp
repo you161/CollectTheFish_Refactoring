@@ -20,12 +20,6 @@ void MainScene::ResizeLayout()
 
 void MainScene::Load()
 {
-    bgm_     = Sound("Sound/mainbgm.wav", Sound::LoopCount::BGM);
-    se_      = Sound("Sound/PushA.wav", Sound::LoopCount::SE);
-    time_se_ = Sound("Sound/Time.wav", Sound::LoopCount::SE);
-
-    player_.Load();
-
     std::vector<FishParam> fishParams =
     {
         { "fish_red.png",Vector2(64.0f,64.0f),    125.0f,  1,  20,  {-80,300}, true },
@@ -36,14 +30,13 @@ void MainScene::Load()
         { "fish_brown.png", Vector2(64.0f,64.0f), 150.0f,  -1, -50,  {1380,400}, true },
         { "fish_pink.png", Vector2(64.0f,64.0f), 250.0f,  1, 10,  {-80,200}, true }
     };
-
     fishManager_.Load(fishParams);
 
-
     bg_.    Load();
+    player_.Load();
     score_.Load();
     timeManager_.Load();
-    bgm_.PlayFromTop();
+    seManager_.Load();
 
     Scene::Load();
 }
@@ -54,9 +47,6 @@ void MainScene::Initialize()
     player_.Initialize();
     score_.Initialize();
     timeManager_.Initialize(30);
-
-    collision_detect_.AddGroupList(L"Player", &player_);
-
     fishManager_.Initialize();
 
     for (auto& fish : fishManager_.GetFishList())
@@ -67,11 +57,17 @@ void MainScene::Initialize()
 
                 if (point < 0) {
                     player_.SetPosition();
+                    seManager_.PlayDamageSE();
+                }
+                else {
+                    seManager_.PlayCollectSe();
                 }
             };
 
         collision_detect_.AddGroupList(L"Fish", &fish);
     }
+    collision_detect_.AddGroupList(L"Player", &player_);
+    seManager_.PlayMainBGM();
 }
 
 void MainScene::Terminate()
@@ -84,12 +80,13 @@ void MainScene::Update(float deltaTime)
     player_.Update();
     fishManager_.Update();
     timeManager_.Update();
-    collision_detect_.Detect(L"Player", L"Fish");
 
     if (timeManager_.GetTimeFlag()) {
         DontDestroy.m_score = score_;
         SceneManager.SetNextScene(NextScene::ScoreScene);
     }
+
+    collision_detect_.Detect(L"Player", L"Fish");
 
     Scene::Update(deltaTime);
 }
@@ -99,5 +96,4 @@ void MainScene::AddScore(int point)
     int score = score_.GetScore();
     score += point;
     score_.SetScore(score);
-    se_.PlayFromTop();
 }
