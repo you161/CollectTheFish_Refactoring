@@ -119,6 +119,7 @@
     <ClInclude Include="Classes\PlayerLife.h" />
     <ClInclude Include="Classes\PlayerMovement.h" />
     <ClInclude Include="Classes\SpriteObject.h" />
+    <ClInclude Include="Classes\TimeManager.h" />
     <ClInclude Include="HEToolKit\cppcoro\cppcoro.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Bezier.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Keyboard.h" />
@@ -153,6 +154,7 @@
     <ClCompile Include="Classes\PlayerLife.cpp" />
     <ClCompile Include="Classes\PlayerMovement.cpp" />
     <ClCompile Include="Classes\SpriteObject.cpp" />
+    <ClCompile Include="Classes\TimeManager.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Keyboard.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Mouse.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\SimpleMath.cpp" />

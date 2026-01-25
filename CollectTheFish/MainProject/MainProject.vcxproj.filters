@@ -139,6 +139,9 @@
     <ClInclude Include="Classes\Fish.h">
       <Filter>Classes\Fish</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\TimeManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -212,6 +215,9 @@
     </ClCompile>
     <ClCompile Include="Classes\Fish.cpp">
       <Filter>Classes\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\TimeManager.cpp">
+      <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
