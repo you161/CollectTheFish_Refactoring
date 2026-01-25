@@ -13,7 +13,6 @@
 
 class Player : public SpriteObject, public ICollider {
 public:
-    std::function<void()> CollisionProc;
     void Load();
     void Initialize();
     void Update();

@@ -33,7 +33,7 @@ void Player::Update()
     }
 
     if (m_sprite.params.pos.y >= 720.0f - m_sprite.params.siz.y) {
-        OnCollision();
+        SetPosition();
     }
 }
 
@@ -50,10 +50,8 @@ Math::Rectangle Player::GetCollision()
     return collision;
 }
 
-
 void Player::OnCollision()
 {
-    CollisionProc();
 }
 
 void Player::SetPosition()
