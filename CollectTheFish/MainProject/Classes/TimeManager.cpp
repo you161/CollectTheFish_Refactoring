@@ -29,6 +29,7 @@ void TimeManager::Update()
 {
     if (count_time_ <= 0.0f && !is_gameover_) {
         is_gameover_ = true;
+        time_text_.SetText("0");
     }
     else {
         count_time_ -= Time.deltaTime;
